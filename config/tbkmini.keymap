@@ -12,13 +12,9 @@
   flavor = "hold-preferred";
 };
 
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
-
 / {
   chosen {
-    zmk,matrix_transform = &skeletyl_transform;
+    zmk,matrix_transform = &default_transform;
   };
 
   behaviors {
@@ -30,13 +26,6 @@
       quick_tap_ms = <150>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
-    };
-    u_caps_word: u_caps_word {
-      compatible = "zmk,behavior-mod-morph";
-      label = "u_caps_word";
-      #binding-cells = <0>;
-      bindings = <&caps_word>, <&kp CAPS>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
 
