@@ -1,10 +1,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
 #define NUM 1
 #define SYM 2
+#define SYS 3
 
 &lt {
   tapping-term-ms = <300>;
@@ -56,6 +58,14 @@
   &trans     &trans    &kp UNDER  &kp EQUAL &kp LBRC     &kp LBKT                     &kp RBKT  &kp RBRC  &kp KP_PLUS     &kp MINUS &trans    &trans
 	&trans     &trans    &trans     &trans    &trans       &trans                       &trans    &trans    &trans          &trans    &trans    &trans
 	                                   &none       &none   &trans                       &kp RET   &none &none
+            >;
+        };
+        sys_layer {
+            bindings = <
+	&trans  &trans  &trans     &trans      &trans      &trans                 &trans    &trans    &trans   &trans    &trans  &trans
+	&trans  &trans  &trans     &trans      &trans      &trans                 &trans    &trans    &trans   &trans    &trans  &trans
+	&trans  &trans  &trans     &trans      &trans      &trans                 &trans    &trans    &trans   &trans    &trans  &trans
+	                                   &none       &none   &none          &none &none &none
             >;
         };
     };
